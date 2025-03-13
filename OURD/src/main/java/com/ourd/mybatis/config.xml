@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+  	<properties resource="com/ourd.mybatis/db.properties"/>
+  	<typeAliases>
+  		<typeAlias type="com.ourd.vo.Belong" alias="belong"/>
+  		<typeAlias type="com.ourd.vo.Club" alias="club"/>
+  		<typeAlias type="com.ourd.vo.Comment" alias="comment"/>
+  		<typeAlias type="com.ourd.vo.Diary" alias="diary"/>
+  		<typeAlias type="com.ourd.vo.Message" alias="message"/>
+  		<typeAlias type="com.ourd.vo.User" alias="user"/>
+  	</typeAliases>
+  	
+  	
+  	
+  	<environments default="development">
+  		<environment id="development">
+  			<transactionManager type="JDBC"/>
+  			<dataSource type="POOLED">
+  				<property name="driver" value="${driver}"/>
+  				<property name="url" value="${url}"/>
+  				<property name="username" value="${username}"/>
+  				<property name="password" value="${password}"/>
+  			</dataSource>
+  		</environment>
+  	</environments>
+  	
+  	<mappers>
+  		<mapper resource="com/ourd/mybatis/BelongMapper.xml"/>
+  		<mapper resource="com/ourd/mybatis/ClubMapper.xml"/>
+  		<mapper resource="com/ourd/mybatis/CommentMapper.xml"/>
+  		<mapper resource="com/ourd/mybatis/DiaryMapper.xml"/>
+  		<mapper resource="com/ourd/mybatis/MessageMapper.xml"/>
+  		<mapper resource="com/ourd/mybatis/UserMapper.xml"/>
+  	</mappers>
+  
+  </configuration>

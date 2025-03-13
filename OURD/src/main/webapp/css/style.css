@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+input{
+	cursor: pointer;
+	outline: none;
+	border: 3px solid crimson;
+}
+
+body{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: yellowgreen;
+}
+
+
+
+
+.container{
+	width : 1300px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+
+.container header{
+	height: 250px;
+	border : 1px solid blue;
+	
+}
+
+header .part1{
+	height: 60%;
+	border: 1px solid brown;
+	display: flex;
+	align-items: center;
+}
+
+.part1 :nth-child(1){
+	flex: 1;
+}
+.part1 :nth-child(2){
+	flex: 3;
+}
+.part1 :nth-child(3){
+	flex: 1;
+}
+
+
+header .part2{
+	height: 40%;
+	border: 1px solid brown;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container main{
+	height: 600px;
+	overflow: hidden;
+	border : 1px solid black;
+	display: flex;
+}
+
+main :nth-child(1){
+	flex: 1;
+	border: 1px solid black;
+}
+main :nth-child(2){
+	flex: 8;
+	border: 1px solid black;
+}
+main :nth-child(3){
+	flex: 1;
+	border: 1px solid black;
+}
+
+.container footer{
+	height: 150px;
+	border : 1px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
