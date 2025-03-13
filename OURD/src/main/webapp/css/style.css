@@ -72,6 +72,17 @@ header .part2{
 	display: flex;
 }
 
+.mainLogo{
+	height: 100%;
+	width: 100%;
+}
+
+img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
 main :nth-child(1){
 	flex: 1;
 	border: 1px solid black;
