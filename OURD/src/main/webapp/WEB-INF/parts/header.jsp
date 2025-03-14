@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>OURD 우리끼리 쓰는 다이어리</title>
-<link rel="stylesheet" type="text/css" href="${ctx }/css/style.css">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/style.css?ver=1">
 <script type="text/javascript" src="script/base.js" defer></script>
 
 
