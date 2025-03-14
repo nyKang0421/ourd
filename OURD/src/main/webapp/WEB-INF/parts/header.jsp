@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>OURD 우리끼리 쓰는 다이어리</title>
-<link rel="stylesheet" type="text/css" href="${ctx }/css/style.css?ver=1">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/style.css?ver=2">
 <script type="text/javascript" src="script/base.js" defer></script>
 
 
@@ -19,7 +19,7 @@
 		<header>
 			<div class="header part1">
 				<div class="logo">
-					<p>이미지 자리
+					<img id="toplogo" src="/Uploads/logo2.jpg" alt="logo2.jpg"/>
 				</div>
 				<div class="slogan"> 우리만의 비밀일기 OURD</div>
 				<div class="loginUser">
@@ -33,8 +33,9 @@
 			</div>
 			<div class="header part2">
 				<div class="guest gnb">
-				<input type="button" class="menu login" value="로그인"/>
-				<input type="button" class="menu join" value="가입하기"/>
+				<input type="button" class="menu home" onclick="location.href='${ctx}/main.do'" value="홈"/>
+				<input type="button" class="menu login" onclick="location.href='${ctx}/gologin.do'" value="로그인"/>
+				<input type="button" class="menu join" onclick="location.href='${ctx}/gojoin.do'" value="가입하기"/>
 				</div>
 				<div class="login gnb">
 					<input type="button" class="menu write" value="일기쓰기"/>

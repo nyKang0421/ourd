@@ -22,6 +22,7 @@ public class MybatisConfig {
 	}
 	
 	public static SqlSessionFactory getInstance() {
+		System.out.println(squlSessionFactory);
 		return squlSessionFactory;
 	}
 

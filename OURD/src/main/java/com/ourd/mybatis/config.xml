@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
   
   <configuration>
-  	<properties resource="com/ourd.mybatis/db.properties"/>
+  	<properties resource="com/ourd/mybatis/db.properties"/>
   	<typeAliases>
   		<typeAlias type="com.ourd.vo.Belong" alias="belong"/>
   		<typeAlias type="com.ourd.vo.Club" alias="club"/>

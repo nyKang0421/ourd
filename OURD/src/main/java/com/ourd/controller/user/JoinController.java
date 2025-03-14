@@ -8,14 +8,13 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class MainController implements Controller {
+public class JoinController implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		
-		return "main";
+		// TODO Auto-generated method stub
+		return "init/join";
 	}
 
 }

@@ -2,7 +2,10 @@ package com.ourd.frontController;
 
 import java.util.HashMap;
 
-import com.ourd.controller.user.MainController;
+import com.ourd.controller.main.MainController;
+import com.ourd.controller.user.JoinController;
+import com.ourd.controller.user.LoginController;
+import com.ourd.controller.user.ValidIdAjax;
 
 public class HandlerMapping {
 	private HashMap<String, Controller> mappings;
@@ -12,6 +15,8 @@ public class HandlerMapping {
 		
 		// 페이지 이동 mappings
 		mappings.put("/main.do",new MainController());
+		mappings.put("/gologin.do",new LoginController());
+		mappings.put("/gojoin.do",new JoinController());
 		
 		//belong 처리 mappings
 		
@@ -24,6 +29,7 @@ public class HandlerMapping {
 		//message 처리 mappings
 		
 		//user 처리 mappings
+		mappings.put("/valididajax.do", new ValidIdAjax());
 	}
 	
 	
