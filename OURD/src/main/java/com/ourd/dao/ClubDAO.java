@@ -27,6 +27,14 @@ public class ClubDAO {
 		session.close();
 		return vo;
 	}
+
+	public Club getWeinfo(String we) {
+		String name = we;
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		Club club = session.selectOne("mapper.club.clubinfo", name);
+		session.close();
+		return club;
+	}
 	
 	
 

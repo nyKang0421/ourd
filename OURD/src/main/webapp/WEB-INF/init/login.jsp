@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			
-			<input type="submit" class="btn-send login-btn" value="login">
+			<input type="submit" class="btn-send login-btn" value="로그인">
 			
 		</form>
 	</div>

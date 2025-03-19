@@ -4,4 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="mapper.message">
   
+  <insert id="sendmsg" parameterType="message">
+  	insert into message values (null, #{club}, #{send}, #{take},#{state});
+  </insert>
+  
+  <select id="validmsg" parameterType="message" resultType="Integer">
+  	select count(*) from message where club = #{club} and send = #{send} and take = #{take};
+  </select>
+  
 </mapper>

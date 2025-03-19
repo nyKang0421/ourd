@@ -5,18 +5,21 @@ isCheckWE = false;
 const we = document.getElementById("inputWe");
 we.addEventListener("keyup",()=>{
 	let weValue = we.value;
-	console.log(weValue);
+	if(weValue.length < 1 ){
+		weCheckDo = false;
+		we.style.border='3px solid crimson';
+	}
 	if(checkwelength(weValue) === true){
 			weCheckDo = true;
 			we.style.border='3px solid green';
-		}else{
+	}else{
 			weCheckDo = false;
 			we.style.border='3px solid crimson';
-		}
+	}
 })
 
 function checkwelength(we){
-	return we.length<=20;
+	return we.length != 0 && we.length<=20;
 }
 
 async function checkWe(){

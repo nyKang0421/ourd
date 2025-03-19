@@ -2,9 +2,11 @@ package com.ourd.controller.user;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import com.ourd.dao.UserDAO;
 import com.ourd.frontController.Controller;
+import com.ourd.vo.Club;
 import com.ourd.vo.User;
 
 import jakarta.servlet.ServletException;
@@ -25,6 +27,8 @@ public class UserLoginController implements Controller {
 		String ctx = request.getContextPath();
 		PrintWriter writer = response.getWriter();
 		response.setContentType("text/html; charset=UTF-8");
+		List<Club> clubKeeper = null;
+		List<Club> clubMember = null;
 		
 		int cnt = UserDAO.getInstance().checkLogin(id,pw);
 		if(cnt == 0) {

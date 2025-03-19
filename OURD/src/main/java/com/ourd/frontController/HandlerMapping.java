@@ -6,9 +6,12 @@ import com.ourd.controller.belong.InviteWeController;
 import com.ourd.controller.belong.JoinWeController;
 import com.ourd.controller.club.ClubInsertController;
 import com.ourd.controller.club.MakeWeController;
+import com.ourd.controller.club.SearchWeAjax;
 import com.ourd.controller.club.ValidWeAjax;
 import com.ourd.controller.club.WeController;
 import com.ourd.controller.main.MainController;
+import com.ourd.controller.message.CheckMsg;
+import com.ourd.controller.message.SendJoinMsg;
 import com.ourd.controller.user.JoinController;
 import com.ourd.controller.user.LoginController;
 import com.ourd.controller.user.UserInfoController;
@@ -40,12 +43,15 @@ public class HandlerMapping {
 		//club 처리 mappings
 		mappings.put("/makewe.do",new ClubInsertController());
 		mappings.put("/validweajax.do", new ValidWeAjax());
+		mappings.put("/searchweajax.do", new SearchWeAjax());
 		
 		//comment 처리 mappings
 		
 		//diary 처리 mappings
 		
 		//message 처리 mappings
+		mappings.put("/sendjoinmsg.do", new SendJoinMsg());
+		mappings.put("/checkmsg.do", new CheckMsg());
 		
 		//user 처리 mappings
 		mappings.put("/valididajax.do", new ValidIdAjax());

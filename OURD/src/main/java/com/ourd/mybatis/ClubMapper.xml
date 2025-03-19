@@ -8,6 +8,7 @@
   	select count(*) from club where name = #{name};
   </select>
   
+  
   <insert id="insertclub" parameterType="club">
   	insert into club values (null, #{name}, #{keeper});
   </insert>
