@@ -19,7 +19,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: yellowgreen;
+	background-color: rgb(163,204,163);
 }
 
 
@@ -67,7 +67,7 @@ header .header.part1 .loginUser .guest{
 	display: block;
 }
 header .header.part1 .loginUser .login{
-	display: none;
+	display: block;
 }
 
 
@@ -84,7 +84,7 @@ header .part2 .guest.gnb{
 }
 
 header .part2 .login.gnb{
-	display: none;
+	display: block;
 }
 
 .container main{

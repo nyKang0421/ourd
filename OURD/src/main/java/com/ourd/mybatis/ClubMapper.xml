@@ -4,4 +4,16 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="mapper.club">
   
+    <select id="validwe" parameterType="String" resultType="Integer">
+  	select count(*) from club where name = #{name};
+  </select>
+  
+  <insert id="insertclub" parameterType="club">
+  	insert into club values (null, #{name}, #{keeper});
+  </insert>
+  
+  <select id="clubinfo" parameterType="String" resultType="club">
+  	select * from club where name = #{name};
+  </select>
+  
 </mapper>

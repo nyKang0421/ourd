@@ -7,5 +7,20 @@
   <select id="validid" parameterType="String" resultType="Integer">
   	select count(*) from user where id = #{id};
   </select>
+  <select id="validnickname" parameterType="String" resultType="Integer">
+  	select count(*) from user where  nickname= #{nickname};
+  </select>
+  
+  <insert id="insertuser" parameterType="user">
+  	insert into user values (null, #{name}, #{nickname}, #{birth}, #{id}, #{pw}, #{email}, #{tel});
+  </insert>
+  
+  <select id="checklogin" parameterType="user" resultType="Integer">
+  	select count(*) from user where  id = #{id} and pw = #{pw};
+  </select>
+  
+  <select id="userinfo" parameterType="String" resultType="user">
+  	select * from user where id = #{id};
+  </select>
   
 </mapper>

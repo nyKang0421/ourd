@@ -1,27 +1,21 @@
-package com.ourd.controller.user;
+package com.ourd.controller.belong;
 
 import java.io.IOException;
 
-import com.ourd.dao.UserDAO;
 import com.ourd.frontController.Controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class ValidIdAjax implements Controller {
+public class InviteWeController implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		
-		String id = request.getParameter("inputId");
-		System.out.println(id);
-		String passData = UserDAO.getInstance().checkValidId(id) == 0? "valid":"notValid";
-		
-		response.getWriter().print(passData);
-		
-		return null;
+		return "we/invitewe";
 	}
 
 }

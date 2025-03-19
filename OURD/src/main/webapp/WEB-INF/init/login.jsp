@@ -4,7 +4,7 @@
 
 <div class="inner"> 
 	<div class="login">
-		<form class="loginForm">
+		<form class="loginForm" action="${ctx}/userlogin.do">
 			<div class="row">
 				<div class="field">
 					<label>아이디</label>
@@ -15,11 +15,11 @@
 			<div class="row">
 				<div class="field">
 					<label>비밀번호</label>
-					<input type="text" name="pw" required placeholder="PW를 입력해주세요">
+					<input type="password" name="pw" required placeholder="PW를 입력해주세요">
 				</div>
 			</div>
 			
-			<input type="button" class="btn-send login-btn" onclick="" value="login">
+			<input type="submit" class="btn-send login-btn" value="login">
 			
 		</form>
 	</div>

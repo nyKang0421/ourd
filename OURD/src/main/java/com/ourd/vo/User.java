@@ -9,6 +9,31 @@ public class User {
 	String pw;
 	String email;
 	String tel;
+	
+	public User(int num, String name, String nickname, String birth, String id, String pw, String email, String tel) {
+		this.num = num;
+		this.name = name;
+		this.nickname = nickname;
+		this.birth = birth;
+		this.id = id;
+		this.pw = pw;
+		this.email = email;
+		this.tel = tel;
+	}
+	public User(String name, String nickname, String birth, String id, String pw, String email, String tel) {
+		this.name = name;
+		this.nickname = nickname;
+		this.birth = birth;
+		this.id = id;
+		this.pw = pw;
+		this.email = email;
+		this.tel = tel;
+	}
+	public User(String id, String pw) {
+		this.id = id;
+		this.pw = pw;
+	}
+	
 	public int getNum() {
 		return num;
 	}

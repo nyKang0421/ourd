@@ -8,7 +8,7 @@
 	
 	<footer>
 		<div class="footer location1">
-			<h3>OURd</h3>
+			<h3>OURD</h3>
 		</div>
 		<div class="footer location2">
 			<h5>개발자 : Gganggom</h5>

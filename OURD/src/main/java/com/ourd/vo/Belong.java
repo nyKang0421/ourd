@@ -5,6 +5,22 @@ public class Belong {
 	int club;
 	int keeper;
 	int member;
+	
+	
+	public Belong(int club, int keeper, int member) {
+		super();
+		this.club = club;
+		this.keeper = keeper;
+		this.member = member;
+	}
+
+	public Belong(int num, int club, int keeper, int member) {
+		this.num = num;
+		this.club = club;
+		this.keeper = keeper;
+		this.member = member;
+	}
+	
 	public int getNum() {
 		return num;
 	}

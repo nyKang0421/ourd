@@ -9,15 +9,15 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class ValidIdAjax implements Controller {
+public class ValidNicknameAjax implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String id = request.getParameter("inputId");
-		System.out.println(id);
-		String passData = UserDAO.getInstance().checkValidId(id) == 0? "valid":"notValid";
+		String nickname = request.getParameter("inputNickname");
+		System.out.println(nickname);
+		String passData = UserDAO.getInstance().checkValidNickname(nickname) == 0? "valid":"notValid";
 		
 		response.getWriter().print(passData);
 		
