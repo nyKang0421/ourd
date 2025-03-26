@@ -12,9 +12,10 @@
 	        <p class="msg" id="weMsg">${resultUser.getNickname()}에 함께 요청을 할까요?</p>
       	</c:if>
       	<form class = "joinweform" action="${ctx}/sendjoinmsg.do">
-      	<input type="hidden" id="joinClubNum" name="joinClubNum" value="${resultClub.getNum()}"/>
-      	<input type="hidden" id="joinClubKeeper" name="joinClubKeeper" value="${lognum}"/>
-      	<input type="hidden" id="joinSender" name="joinSender" value="${resultUser.getNum}"/>
+      	<input type="hidden" id="joinClubNum" name="joinClubNum" value="${inviteClubNum}"/>
+      	<input type="hidden" id="joinTaker" name="joinTaker" value="${resultUser.getNum()}"/>
+      	<input type="hidden" id="joinSender" name="joinSender" value="${lognum}"/>
+      	<input type="hidden" id="state" name="state" value="1"/>
         
         <button class="btn-close msg-close" onclick="NonActiveWeModal()"> 취소하기 </button>
         <button class="btn-close msg-close" onclick="sendinviteMsg(form)"> 초대하기 </button>

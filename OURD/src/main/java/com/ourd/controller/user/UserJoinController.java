@@ -36,7 +36,7 @@ public class UserJoinController implements Controller {
 		if(cnt == 0) {
 			writer.println("<script>alert('가입에 실패햐였습니다\\n다시 시도해주세요'); location.href='"+ctx+"/gojoin.do';</script>");
 		}else {
-			writer.println("<script>alert('가입 완료\\n로그인 후 이용해주세요'); location.href='"+ctx+"/main.do';</script>");
+			writer.println("<script>alert('가입 완료\\n로그인 후 이용해주세요'); location.href='\"+ctx+\"/main.do';</script>");
 		}
 		
 		return null;

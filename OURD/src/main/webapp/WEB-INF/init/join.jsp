@@ -3,7 +3,7 @@
 <%@ include file="../parts/header.jsp"%>
 
 <div class="inner"> 
-	<div class="login">
+	<div class="join">
 		<form class="joinForm" action="${ctx}/userjoin.do">
 			<div class="row">
 				<div class="field">

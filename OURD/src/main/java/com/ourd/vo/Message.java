@@ -6,6 +6,7 @@ public class Message {
 	int send;
 	int take;
 	int state;
+	// state : 0_신청 1_초대 5_수락 6_거절
 	
 	public Message(int num, int club, int send, int take, int state) {
 		this.num = num;

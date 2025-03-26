@@ -17,4 +17,16 @@
   	select * from club where name = #{name};
   </select>
   
+  <select id="getAclub" parameterType="Integer" resultType="club">
+  	select * from club where num = #{i};
+  </select>
+  
+  <select id="getKeeperClub" parameterType="Integer" resultType="club">
+  	select * from club where keeper = #{num};
+  </select>
+  
+  <select id="clubname" parameterType="Integer" resultType="String">
+  	select name from club where num = #{num};
+  </select>
+  
 </mapper>

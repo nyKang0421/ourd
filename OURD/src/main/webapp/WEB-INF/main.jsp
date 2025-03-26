@@ -4,7 +4,7 @@
 
 <div class="inner"> 
 	<div class="mainLogo">
-		<img src="/Uploads/logo1.jpg" alt="logo1.jpg"/>
+		<img src="/Uploads/OURD_main.jpg" alt="logo1.jpg"/>
 	</div>
 </div>
 

@@ -5,11 +5,43 @@
   <mapper namespace="mapper.message">
   
   <insert id="sendmsg" parameterType="message">
-  	insert into message values (null, #{club}, #{send}, #{take},#{state});
+  	insert into message values (null, #{club}, #{send}, #{take}, #{state});
   </insert>
   
   <select id="validmsg" parameterType="message" resultType="Integer">
   	select count(*) from message where club = #{club} and send = #{send} and take = #{take};
   </select>
+  
+  <select id="sendcnt" parameterType="Integer" resultType="Integer">
+  	select count(*) from message where send = #{log};
+  </select>
+  
+  <select id="takecnt" parameterType="Integer" resultType="Integer">
+  	select count(*) from message where take = #{log} and state in(0,1);
+  </select>
+  
+  <select id="gettakelist" parameterType="Integer" resultType="message">
+  	select * from message where take = #{log} order by num desc;
+  </select>
+  
+  <select id="getsendlist" parameterType="Integer" resultType="message">
+  	select * from message where send = #{log} order by num desc;
+  </select>
+  
+  <update id="stateagree" parameterType="Integer">
+  	update message set state ='5' where num = #{num};
+  </update>
+  
+  <update id="statedisagree" parameterType="Integer">
+  	update message set state ='6' where num = #{num};
+  </update>
+  
+  <select id="msginfo" parameterType="Integer" resultType="message">
+  	select * from message where num = #{num};
+  </select>
+  
+  <delete id="removemsg" parameterType="Integer">
+ 	delete from message where num = #{num};
+  </delete>
   
 </mapper>

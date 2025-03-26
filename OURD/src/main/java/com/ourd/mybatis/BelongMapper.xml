@@ -8,8 +8,16 @@
   	insert into belong values (null, #{club}, #{keeper}, #{member});
   </insert>
   
-  <select id="checkbelong" parameterType="Integer" resultType="Integer">
-  	select count(*) from belong where club = #{club};
+  <select id="checkbelong" parameterType="belong" resultType="Integer">
+  	select count(*) from belong where club = #{club} and keeper =#{keeper} and member = #{member};
+  </select>
+  
+  <select id="getclubnum" parameterType="Integer" resultType="Integer">
+  	select club from belong where member = #{num};
+  </select>
+  
+  <select id="alreadyjoin" parameterType="belong" resultType="Integer">
+  	select count(*) from belong where club = #{club} and member = #{member};
   </select>
   
 </mapper>

@@ -1,8 +1,13 @@
 package com.ourd.dao;
 
+import java.util.ArrayList;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.ourd.util.MybatisConfig;
+import com.ourd.vo.Club;
+import com.ourd.vo.Diary;
+import com.ourd.vo.Message;
 import com.ourd.vo.User;
 
 public class UserDAO {
@@ -50,5 +55,54 @@ public class UserDAO {
 		vo = session.selectOne("mapper.user.userinfo", id);
 		session.close();
 		return vo;
+	}
+
+	public int checkValidUser(String we) {
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		int cnt = session.selectOne("mapper.user.validuser", we);
+		session.close();
+		return cnt;
+	}
+
+	public User getUserinfo(String we) {
+		String nickname = we;
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		User user = session.selectOne("mapper.user.userinfobynickname", nickname);
+		session.close();
+		return user;
+	}
+
+	public ArrayList<String> getSendGet(ArrayList<Message> sendlist) {
+		ArrayList<String> sendget = new ArrayList<String>();
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		for(int i = 0; i<sendlist.size(); i++) {
+			int num = sendlist.get(i).getSend();
+			String name = session.selectOne("mapper.user.username", num);
+			sendget.add(name);
+		}
+		session.close();
+		return sendget;
+	}
+
+	public ArrayList<String> getNameList(ArrayList<Message> list) {
+		ArrayList<String> nameList = new ArrayList<String>();
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		for(Message m : list) {
+			int num = m.getState() == 0? m.getSend():m.getTake();
+			nameList.add(session.selectOne("mapper.user.username", num));
+		}
+		session.close();
+		return nameList;
+	}
+
+	public ArrayList<String> getWriterList(ArrayList<Diary> diarylist) {
+		ArrayList<String> nameList = new ArrayList<String>();
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		for(Diary d : diarylist) {
+			int num = d.getWriter();
+			nameList.add(session.selectOne("mapper.user.username", num));
+		}
+		session.close();
+		return nameList;
 	}
 }

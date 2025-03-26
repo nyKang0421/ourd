@@ -12,8 +12,9 @@
       	</c:if>
       	<form class = "joinweform" action="${ctx}/sendjoinmsg.do">
       	<input type="hidden" id="joinClubNum" name="joinClubNum" value="${resultClub.getNum()}"/>
-      	<input type="hidden" id="joinClubKeeper" name="joinClubKeeper" value="${resultClub.getKeeper()}"/>
+      	<input type="hidden" id="joinTaker" name="joinTaker" value="${resultClub.getKeeper()}"/>
       	<input type="hidden" id="joinSender" name="joinSender" value="${lognum}"/>
+      	<input type="hidden" id="state" name="state" value="0"/>
         
         <button class="btn-close msg-close" onclick="NonActiveWeModal()"> 취소하기 </button>
         <button class="btn-close msg-close" onclick="sendJoinMsg(form)"> 신청하기 </button>

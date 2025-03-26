@@ -4,4 +4,24 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="mapper.diary">
   
+  <insert id="insertdiary" parameterType="diary">
+  	insert into diary values (null, #{writer},#{club},#{title},#{content},#{feel},#{weather},#{img},#{date});
+  </insert>
+  
+  <select id="checkdiary" parameterType="diary" resultType="Integer">
+  	select count(*) from diary where writer = #{writer} and club = #{club} and title = #{title} and content = #{content} and feel = #{feel} and date = #{date};
+  </select>
+  
+  <select id="diarylist" parameterType="Integer" resultType="diary">
+  	select * from diary where club = #{we} order by num desc;
+  </select>
+  
+  <delete id="removediary" parameterType="Integer">
+  	delete from diary where num = #{num};
+  </delete>
+  
+  <select id="delcheckdiary" parameterType="Integer" resultType="Integer">
+  	select count(*) from diary where num = #{num};
+  </select>
+  
 </mapper>

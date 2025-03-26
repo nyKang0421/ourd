@@ -1,25 +1,25 @@
-package com.ourd.controller.main;
+package com.ourd.controller.message;
 
 import java.io.IOException;
 
+import com.ourd.dao.MessageDAO;
 import com.ourd.frontController.Controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
-public class MainController implements Controller {
+public class RemoveMsg implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println(request.getParameter("num"));
+		int num = Integer.parseInt(request.getParameter("num"));
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("sendPage", 0);
-		session.setAttribute("takePage", 0);
+		MessageDAO.getInstance().removeMsg(num);
 		
-		return "main";
+		return "redirect:/gomessage.do";
 	}
 
 }

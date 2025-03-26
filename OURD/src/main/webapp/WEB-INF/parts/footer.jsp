@@ -20,9 +20,7 @@
 	
 	<%@ include file="./failModal.jsp" %>
 	<%@ include file="./successModal.jsp" %>
-	<%@ include file="./viewModal.jsp" %>
-
-
+	
 	
 </body>
 </html>

@@ -22,10 +22,11 @@ public class SearchWeAjax implements Controller {
 		Club club = ClubDAO.getInstance().getWeinfo(we);
 		System.out.println(checkData);
 		System.out.println(club);
+		HttpSession session = request.getSession();
 		if(club == null) {
 			System.out.println("검색 결과 가져오기 실패");
+			session.removeAttribute("resultClub");
 		}else{
-			HttpSession session = request.getSession();
 			session.setAttribute("resultClub", club);
 		}
 				

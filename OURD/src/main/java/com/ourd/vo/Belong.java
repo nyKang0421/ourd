@@ -21,6 +21,11 @@ public class Belong {
 		this.member = member;
 	}
 	
+	public Belong(int club, int take) {
+		this.club = club;
+		this.member = take;
+	}
+
 	public int getNum() {
 		return num;
 	}

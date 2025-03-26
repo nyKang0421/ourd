@@ -23,4 +23,20 @@
   	select * from user where id = #{id};
   </select>
   
+  <select id="userinfobynickname" parameterType="String" resultType="user">
+  	select * from user where nickname = #{nickname};
+  </select>
+  
+   <select id="userinfobynicknameInt" parameterType="Integer" resultType="user">
+  	select * from user where nickname = #{nickname};
+  </select>
+  
+  <select id="validuser" parameterType="String" resultType="Integer">
+  	select count(*) from user where nickname = #{we};
+  </select>
+  
+  <select id="username" parameterType="Integer" resultType="String">
+  	select nickname from user where num = #{num};
+  </select>
+  
 </mapper>

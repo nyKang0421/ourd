@@ -75,7 +75,7 @@ function sendJoinMsg(form){
 		event.preventDefault();
 		console.log('preventSubmit');
 	})
-	if(document.getElementById('joinClubKeeper').value === document.getElementById('joinSender').value){
+	if(document.getElementById('joinTaker').value === document.getElementById('joinSender').value){
 		alert("본인이 모임장인 우리에는 신청할 수 없습니다.")
 		return;
 	}
@@ -84,8 +84,8 @@ function sendJoinMsg(form){
 		num: null,
 		club: document.getElementById('joinClubNum').value,
 		send: document.getElementById('joinSender').value,
-		take: document.getElementById('joinClubKeeper').value,
-		state: null
+		take: document.getElementById('joinTaker').value,
+		state: '0'
 	}
 	
 	fetch("checkmsg.do", {

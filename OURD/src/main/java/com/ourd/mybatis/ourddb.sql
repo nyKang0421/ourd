@@ -54,7 +54,7 @@ create table diary(
   title varchar(30) not null,
   content varchar(255) not null,
   feel varchar(30),
-  weather varchar(30),
+  weather varchar(30) not null,
   img VARCHAR(50),
   date varchar(30) not null
 );

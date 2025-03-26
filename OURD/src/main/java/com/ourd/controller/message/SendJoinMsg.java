@@ -18,8 +18,8 @@ public class SendJoinMsg implements Controller {
 		
 		int club = Integer.parseInt(request.getParameter("joinClubNum"));
 		int send = Integer.parseInt(request.getParameter("joinSender"));
-		int take = Integer.parseInt(request.getParameter("joinClubKeeper"));
-		int state = 0;
+		int take = Integer.parseInt(request.getParameter("joinTaker"));
+		int state = Integer.parseInt(request.getParameter("state"));
 		Message msg = new Message(club,send,take,state);
 		int cnt = MessageDAO.getInstance().sendMsg(msg);
 		System.out.println("메세지 추가 됨");
