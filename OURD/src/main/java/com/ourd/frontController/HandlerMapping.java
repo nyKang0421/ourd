@@ -34,6 +34,7 @@ import com.ourd.controller.view.GetDiaryList;
 import com.ourd.controller.view.MovepostDiaryList;
 import com.ourd.controller.view.MovepreDiaryList;
 import com.ourd.controller.view.RemoveDiary;
+import com.ourd.controller.view.ViewDiary;
 import com.ourd.controller.write.DiaryImgUploadAjax;
 import com.ourd.controller.write.DiaryWriteController;
 import com.ourd.controller.write.InsertDiary;
@@ -73,6 +74,7 @@ public class HandlerMapping {
 		mappings.put("/movediarypagepre.do", new MovepreDiaryList());
 		mappings.put("/movediarypagepost.do", new MovepostDiaryList());
 		mappings.put("/removediary.do", new RemoveDiary());
+		mappings.put("/viewdairyinfo.do", new ViewDiary());
 		
 		
 		//message 처리 mappings

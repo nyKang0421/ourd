@@ -42,5 +42,12 @@ public class DiaryDAO {
 		session.close();
 		return cnt;
 	}
+
+	public Diary getADiary(int num) {
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		Diary diary = session.selectOne("mapper.diary.getadiary", num);
+		session.close();
+		return diary;
+	}
 	
 }

@@ -24,4 +24,8 @@
   	select count(*) from diary where num = #{num};
   </select>
   
+  <select id="getadiary" parameterType="Integer" resultType="diary">
+  	select * from diary where num = #{num};
+  </select>
+  
 </mapper>

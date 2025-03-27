@@ -59,3 +59,15 @@ async function deletediary(num){
 	
 }
 
+async function viewdiary(diarynum){
+	await fetch('viewdairyinfo.do',{
+		method: 'post',
+		headers:{
+			'Content-Type' : 'application/x-www-form-urlencoded; charset=utf-8',
+		},
+		body: new URLSearchParams({diarynum}).toString(),
+	})
+	
+	
+	// 모달창 띄우기
+}

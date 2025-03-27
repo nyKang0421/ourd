@@ -105,4 +105,12 @@ public class UserDAO {
 		session.close();
 		return nameList;
 	}
+
+	public String getUserName(int writer) {
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		int num = writer;
+		String user = session.selectOne("mapper.user.username", num);
+		session.close();
+		return user;
+	}
 }

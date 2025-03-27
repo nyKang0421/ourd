@@ -88,6 +88,8 @@
 
 </div>
 
+<div class="overlay"></div>
+
 <script type="text/javascript" src="script/diaryviewer.js" defer></script>
 <%@ include file="../parts/footer.jsp"%>
 <%@ include file="../parts/viewModal.jsp" %>
