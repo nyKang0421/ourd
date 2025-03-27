@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>OURD 우리끼리 쓰는 다이어리</title>
-<link rel="stylesheet" type="text/css" href="${ctx }/css/style.css?ver=4">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/style.css?ver=5">
 <script type="text/javascript" src="script/base.js" defer></script>
 
 
@@ -19,13 +19,13 @@
 		<header>
 			<div class="header part1">
 				<div class="logo">
-					<img id="toplogo" src="/Uploads/logo1.jpg" alt="logo2.jpg"/>
+					<img id="toplogo" src="/Uploads/OURDLOGO.jpg" alt="OURDLOGO.jpg"/>
 				</div>
-				<div class="slogan"> 우리만의 비밀일기 OURD</div>
+				<div class="slogan"></div>
 				<div class="loginUser">
 					<c:choose>
 						<c:when test="${lognum eq null}">
-							<div class="guest User"> guest</div>
+							<div class="guest User">방문을 환영합니다!!</div>
 						</c:when>
 						<c:otherwise>
 							<div class="loginName">${lognickname}</div>
@@ -60,7 +60,9 @@
 		</header>
 		
 		<main>
-			<div class="banner left">좌측배너</div>
+			<div class="banner left" id="banner-left">
+				<img src="/Uploads/coupang.jpg" alt="coupang.jpg"/>
+			</div>
 		
 			
 			

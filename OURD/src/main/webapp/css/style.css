@@ -27,24 +27,24 @@ body{
 
 .container{
 	width : 1300px;
-	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
-	background-color: white;
+	background-color: rgb(163,204,163);
 }
 
 .container header{
 	height: 250px;
-	border : 1px solid blue;
 	
 }
 
 
 header .part1{
+	background-color: #fff;
 	height: 60%;
-	border: 1px solid brown;
 	display: flex;
 	align-items: center;
+	border-radius: 0 0 10px 10px;
+	border-bottom: 3px solid rgb(163,204,163);
 }
 
 .part1 .logo{
@@ -61,7 +61,33 @@ header .part1{
 }
 .part1 .loginUser{
 	flex: 1;
+	color : rgb(92,51,92);
 }
+
+.loginUser .guest{
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+.loginUser .loginName{
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	font-weight: bolder;
+}
+
+.logout{
+	font-weight: bold;
+	color: rgb(92,51,92);
+	border-radius: 10px;
+	padding: 3px 10px;
+	border: 3px solid rgb(163,204,163);
+	background-color: #fff;
+}
+
+.logout:hover{
+	border: 3px solid rgb(92,51,92);
+}
+
 
 header .header.part1 .loginUser .guest{
 	display: block;
@@ -73,10 +99,13 @@ header .header.part1 .loginUser .login{
 
 header .part2{
 	height: 40%;
-	border: 1px solid brown;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 10px;
+	background-color: #fff;
+	border-bottom: 3px solid rgb(163,204,163);
+	border-top: 3px solid rgb(163,204,163);
 }
 
 header .part2 .guest.gnb{
@@ -90,8 +119,11 @@ header .part2 .login.gnb{
 .container main{
 	height: 600px;
 	overflow: hidden;
-	border : 1px solid blue;
 	display: flex;
+	background-color: #fff;
+	border-radius: 10px;
+	border-bottom: 3px solid rgb(163,204,163);
+	border-top: 3px solid rgb(163,204,163);
 }
 
 .mainLogo{
@@ -106,16 +138,14 @@ img{
 }
 
 main .banner.left{
-	flex: 1;
-	border: 1px solid purple;
+	flex: 2;
 }
 main .inner{
-	flex: 8;
-	border: 1px solid orange;
+	flex: 10;
+	
 }
 main .banner.right{
-	flex: 1;
-	border: 1px solid black;
+	flex: 2;
 }
 
 main .banner{
@@ -125,7 +155,7 @@ main .banner{
 main .inner{
 	width: 100%;
 	height: 100%;
-	overflow: scroll;
+	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -134,13 +164,95 @@ main .inner{
 
 .container footer{
 	height: 150px;
-	border : 1px solid green;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #fff;
+	border-radius: 10px 10px 0 0;
+	border-top: 3px solid rgb(163,204,163);
 }
 
 footer .location1{
-	font-size: 2.0em;
+	font-size: 2.5em;
+	font-weight: 900;
 	margin-right: 50px;
 }
+footer .location2{
+	color: rgb(93,51,93);
+}
+
+/* header part1 영역 */
+
+.slogan{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	animation: fade 10s infinite;
+}
+
+@keyframes fade{
+	0%{background-image:url('sloganimg/OURD.jpg');}
+	20%{background-image:url('sloganimg/OURDINFO.jpg');}
+	60%{background-image:url('sloganimg/OURDINFO.jpg');}
+	80%{background-image:url('sloganimg/OURD.jpg');}
+	100%{background-image:url('sloganimg/OURD.jpg');}
+}
+
+/* head part2 영역*/
+
+.header.part2 input{
+	margin: 0px 15px;
+	font-size: 1.3em;
+	font-weight: bolder;
+	color: rgb(92,51,92);
+	border: none;
+	border-radius: 15px;
+	padding: 5px 20px;
+	border: 5px solid rgb(163,204,163);
+	background-color: #fff;
+}
+
+.header.part2 input:hover{
+	border: 5px solid rgb(92,51,92);
+}
+
+
+/*banner 영역*/
+
+.banner.left:hover{
+	cursor: pointer;
+}
+.banner.right:hover{
+	cursor: pointer;
+}
+
+.banner.left {
+	border-right: 2px dotted rgb(163,204,163);
+}
+
+.banner.right {
+	border-left: 2px dotted rgb(163,204,163);
+}
+
+.banner.left img{
+	object-fit: contain;
+}
+
+.banner.right img{
+	object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
