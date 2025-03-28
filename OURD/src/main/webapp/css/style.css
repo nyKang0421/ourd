@@ -196,9 +196,9 @@ footer .location2{
 
 @keyframes fade{
 	0%{background-image:url('sloganimg/OURD.jpg');}
-	20%{background-image:url('sloganimg/OURDINFO.jpg');}
+	30%{background-image:url('sloganimg/OURDINFO.jpg');}
 	60%{background-image:url('sloganimg/OURDINFO.jpg');}
-	80%{background-image:url('sloganimg/OURD.jpg');}
+	70%{background-image:url('sloganimg/OURD.jpg');}
 	100%{background-image:url('sloganimg/OURD.jpg');}
 }
 

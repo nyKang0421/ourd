@@ -1,0 +1,54 @@
+.inner{}
+
+.searchClub{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.searchClub label{
+	display: inline-block;
+	margin-bottom: 40px;
+	color: rgb(92,51,92);
+	font-size: 2.0em;
+	font-weight: bolder;
+}
+
+.findClub{
+	margin-bottom: 40px;
+	text-align: center;
+	border: 4px solid rgb(163,204,163);
+	border-radius: 10px;
+	color: rgb(92,51,92);
+	font-size: 1.5em;
+	width: 500px;
+	height: 60px;
+}
+
+.findClub:hover{
+	border: 4px solid rgb(92,51,92);
+}
+
+input::placeholder{
+	font-size : 0.7em;
+	color: rgb(163,204,163);
+}
+
+.btn-send.findWe-btn{
+	height: 60px;
+	width: 300px;
+	border: 4px solid rgb(92,51,92);
+	border-radius: 10px;
+	background-color: rgb(92,51,92);
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+.btn-send.findWe-btn:hover{
+	background-color: #fff;
+	color: rgb(92,51,92);
+}
+
+

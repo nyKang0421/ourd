@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../parts/header.jsp"%>
 
+<link rel="stylesheet" type="text/css" href="${ctx }/css/invitewestyle.css?ver=1">
+
 <div class="inner"> 
 	<div class="inviteWe">
 	
@@ -19,13 +21,13 @@
 			<div class="searchUser">
 			<label>찾고싶은 멤버</label>
 			<input type="hidden" id="logUser" value="${lognickname }">
-			<input type="text" class="findUser" id="findUser" name="findUser" required placeholder="찾는 친구 별명은?" >
-			<input type="button" class="btn-send findUser-btn" onclick="searchUser()" value="친구찾기">
+			<input type="text" class="findUser" id="findUser" name="findUser" required placeholder="어떤 친구를 찾으세요?" >
 			</div>
+			<input type="button" class="btn-send findUser-btn" onclick="searchUser()" value="친구찾기">
 		</form>
 		</c:if>
 		<c:if test="${keeperclublist eq null }">
-			<h1>모임 장을 하고 있는 우리가 없어요...</h1>
+			<h1 class="nokeeper">모임 장을 하고 있는 우리가 없어요...</h1>
 		</c:if>
 	</div>
 </div>

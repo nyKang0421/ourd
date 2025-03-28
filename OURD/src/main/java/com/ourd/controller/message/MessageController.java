@@ -68,7 +68,14 @@ public class MessageController implements Controller {
 			request.setAttribute("takeName", takeName);
 			ArrayList<String> takeText = new ArrayList<String>();
 			for(int i = 0; i<takelist.size();i++) {
-				String data =takeName.get(i)+"님 "+takeWe.get(i)+"에서 우리 할까요?";
+				int state = takelist.get(i).getState();
+				String data = "";
+				if(state != 1) {
+					data =takeName.get(i)+"님과 "+takeWe.get(i)+"에서 우리 할까요?";
+				}else {
+					data =takeName.get(i)+"님 "+takeWe.get(i)+"에서 우리 할까요?";
+				}
+				
 				takeText.add(data);
 			}
 			request.setAttribute("takeText", takeText);

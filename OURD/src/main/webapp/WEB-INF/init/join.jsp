@@ -34,7 +34,7 @@
 					<input type="button" class="btn-send checkId-btn" onclick="checkId()" value="ID중복체크">
 				</div>
 			</div>
-			<div class="row">
+			<div class="rowtip">
 					<p class="guide"> 아이디는 4자리 이상 영문, 숫자만 사용해 주세요</p>
 			</div>
 			
@@ -46,7 +46,7 @@
 					<input type="password" name="pw" id="inputPw" size="25" required placeholder="비밀번호를 입력해주세요">
 				</div>
 			</div>
-			<div class="row">
+			<div class="rowtip">
 					<p class="guide"> 비밀번호는 8글자 이상, 영문, 숫자 ,특수문자(@$!%*#?&)를 사용해주세요</p>
 			</div>
 			
@@ -67,19 +67,20 @@
 					<input type="email" name="email" id="inputEmail" size="25" required placeholder="E-MAIL을 입력해주세요">
 				</div>
 				
-			</div><div class="row">
+			</div>
+			<div class="row phone">
 				<div class="field1">
 					<label>전화번호</label>
 				</div>
 				<div class="field2">
-					<select name="telinit" id="telinit">
+					<select name="telinit" class="telinit" id="telinit">
 						<option value="010">010</option>
 						<option value="011">011</option>
 						<option value="016">016</option>
 						<option value="019">019</option>
 					</select>
-					<input type="number" name="telmiddle" id="telmiddle" oninput="checkNumLength()" required >
-					<input type="number" name="tellast" id="tellast"  required >
+					<input type="number" name="telmiddle" class="telmiddle" id="telmiddle" oninput="checkNumLength()" required >
+					<input type="number" name="tellast" class="tellast" id="tellast"  required >
 				</div>
 			</div>
 			<div class="row">

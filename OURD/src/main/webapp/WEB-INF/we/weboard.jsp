@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../parts/header.jsp"%>
 
+<link rel="stylesheet" type="text/css" href="${ctx }/css/weboardstyle.css?ver=1">
+
 <div class="inner"> 
 	<div class="weboard">
 		<div class="webtn">

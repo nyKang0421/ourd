@@ -27,10 +27,10 @@ id.addEventListener("keyup",()=>{
 	let idValue = id.value;
 	if(checkidlength(idValue) === true && checkidtext(idValue) === true){
 		idCheckDo = true;
-		id.style.border='3px solid green';
+		id.style.border='4px solid rgb(92,51,92)';
 	}else{
 		idCheckDo = false;
-		id.style.border='3px solid crimson';
+		id.style.border='4px solid crimson';
 	}
 })
 
@@ -55,19 +55,19 @@ function pwDoubleCheck(){
 
 pw.addEventListener("keyup", ()=>{
 	if(pwTextCheck()){
-		pw.style.border="3px solid green";
+		pw.style.border="4px solid rgb(92,51,92)";
 		pwCheckDo = true;
 	}else{
-		pw.style.border="3px solid crimson";
+		pw.style.border="4px solid crimson";
 		pwCheckDo = false;
 	}
 })
 pwRe.addEventListener("keyup", ()=>{
 	if(pwDoubleCheck()){
-		pwRe.style.border="3px solid green";
+		pwRe.style.border="4px solid rgb(92,51,92)";
 		pwDoubleCheckDo = true;
 	}else{
-		pwRe.style.border="3px solid crimson";
+		pwRe.style.border="4px solid crimson";
 		pwDoubleCheckDo = false;
 	}
 })
@@ -76,10 +76,10 @@ const email = document.getElementById('inputEmail');
 
 email.addEventListener("keyup", ()=>{
 	if(emailCheck()){
-		email.style.border="3px solid green";
+		email.style.border="4px solid rgb(92,51,92)";
 		emailCheckDo = true;
 	}else{
-		email.style.border="3px solid crimson";
+		email.style.border="4px solid crimson";
 		emailCheckDo = false;
 	}
 })
@@ -91,12 +91,12 @@ function emailCheck(){
 
 document.getElementById("inputName").addEventListener("input", ()=>{
 	nameCheckDo = true;
-	document.getElementById("inputName").style.border = "3px solid green";
+	document.getElementById("inputName").style.border = "4px solid rgb(92,51,92)";
 })
 
 document.getElementById("birthChoice").addEventListener("click", ()=>{
 	birthCheckDo = true;
-	document.getElementById("birthChoice").style.border = "3px solid green";
+	document.getElementById("birthChoice").style.border = "4px solid rgb(92,51,92)";
 })
 
 
@@ -172,29 +172,29 @@ function checkNumLength(){
 	if(telinit.value == '010'){
 		if(telmiddle.value.length>=4){
 			telmiddle.value = telmiddle.value.slice(0,4);
-			telmiddle.style.border="3px solid green";
+			telmiddle.style.border="4px solid rgb(92,51,92)";
 			telmiddleCheckDo = true;
 		}else{
-			telmiddle.style.border="3px solid crimson";
+			telmiddle.style.border="4px solid crimson";
 			telmiddleCheckDo = false;
 		}
 	}else{
 		if(telmiddle.value.length>=3){
 				telmiddle.value = telmiddle.value.slice(0,3);
-				telmiddle.style.border="3px solid green";
+				telmiddle.style.border="4px solid rgb(92,51,92)";
 				telmiddleCheckDo = true;
 					
 				}else{
-				telmiddle.style.border="3px solid crimson";
+				telmiddle.style.border="4px solid crimson";
 				telmiddleCheckDo = false;
 				}
 	}
 	if(tellast.value.length>=4){
 		tellast.value = tellast.value.slice(0,4);
-		tellast.style.border="3px solid green";
+		tellast.style.border="4px solid rgb(92,51,92)";
 		tellastCheckDo = true;
 	}else{
-		tellast.style.border="3px solid crimson";
+		tellast.style.border="4px solid crimson";
 		tellastCheckDo = false;
 	}
 	//console.log(telmiddle.value)
@@ -204,9 +204,9 @@ tellast.addEventListener('input',checkNumLength);
 
 telinit.addEventListener('change', ()=>{
 	telmiddle.value = '';
-	telmiddle.style.border="3px solid crimson";
+	telmiddle.style.border="4px solid crimson";
 	tellast.value = '';
-	tellast.style.border="3px solid crimson";
+	tellast.style.border="4px solid crimson";
 })
 
 
@@ -262,10 +262,10 @@ function handleNicknameValidationResult(data) {
 
 nickname.addEventListener("input",()=>{
 	if(nickname.value == ''){
-		nickname.style.border = "3px solid crimson";
+		nickname.style.border = "4px solid crimson";
 		nicknameCheckDo = false;
 	}else{
-		nickname.style.border = "3px solid green";
+		nickname.style.border = "4px solid rgb(92,51,92)";
 		nicknameCheckDo = true;
 	}
 })

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../parts/header.jsp"%>
 
-<link rel="stylesheet" type="text/css" href="${ctx }/css/loginstyle.css?ver=1">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/loginstyle.css?ver=2">
 
 <div class="inner"> 
 	<div class="login">

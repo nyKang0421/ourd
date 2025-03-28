@@ -1,0 +1,289 @@
+.inner{}
+
+.messageview{
+	height: 100%;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.takemessage{
+	flex: 1;
+	padding: 5px;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.takemessage h1{
+	flex: 1;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background-color: rgb(92,51,92);
+	border-radius: 15px;
+	color: #fff;
+}
+
+
+.sendmessage{
+	flex: 1;
+	padding: 5px;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.sendmessage h1{
+	flex: 1;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background-color: rgb(163,204,163);
+	border-radius: 15px;
+	color: #fff;
+}
+
+.sendmessage .sendmessageviewer{
+	flex: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.takemessage .takemessageviewer{
+	flex: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sendmessageviewer .prebutton-send{
+	flex:1;
+}
+.takemessageviewer .prebutton-take{
+	flex:1;
+}
+
+.prebutton-send input{
+	border: 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	width: 70px;
+	height: 30px;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+.prebutton-take input{
+	border: 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	width: 70px;
+	height: 30px;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+
+.postbutton-send input{
+	border: 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	width: 70px;
+	height: 30px;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+.postbutton-take input{
+	border: 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	width: 70px;
+	height: 30px;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+
+.sendmessageviewer .sendmessagebox{
+	flex:5;
+	display: flex;
+	
+	height: 100%;
+}
+.takemessageviewer .takemessagebox{
+	flex:5;
+	display: flex;
+	
+	height: 100%;
+}
+
+.sendmessagebox .sendtext{
+	flex:2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.takemessagebox .taketext{
+	flex:2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.sendtext .Asendmessage{
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	width: 100%;
+	margin: auto;
+	border: 4px solid rgb(163,204,163);
+	border-right: none;
+	color: rgb(92,51,92);
+	font-weight: bolder;
+	border-radius: 15px 0 0 15px;
+	font-size: 0.9em;
+}
+.taketext .Atakemessage{
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	width: 100%;
+	border: 4px solid rgb(163,204,163);
+	border-right: none;
+	color: rgb(92,51,92);
+	font-weight: bolder;
+	border-radius: 15px 0 0 15px;
+	font-size: 0.9em;
+}
+
+.sendmessagebox .sendbutton{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.takemessagebox .takebutton{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sendbutton .btn-check-pro{
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+	border : 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	font-weight: bolder;
+	border-radius: 0 15px 15px 0;
+}
+
+.sendbutton .btn-check-stay{
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+	border : 4px solid rgb(163,204,163);
+	background-color: rgb(163,204,163);
+	color: #fff;
+	font-weight: bolder;
+	border-radius: 0 15px 15px 0;
+}
+
+.takebutton .takebtnpair{
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+	color: #fff;
+	font-weight: bolder;
+	font-size: 1.1em;
+}
+
+.takebtnpair input{
+	flex:1;
+	height: 100%;
+	background-color: white;
+	border: none;
+}
+
+.sendbutton .btn-check-pro:hover{
+	color: rgb(92,51,92);
+	background-color: #fff;
+}
+
+.btn-pre-takemessage:hover,
+.btn-post-takemessage:hover,
+.btn-pre-sendmessage:hover,
+.btn-post-sendessage:hover{
+	color: rgb(92,51,92);
+	background-color: #fff;
+}
+
+
+
+.takebtnpair .btn-agree{
+	border: 4px solid rgb(163,204,163);
+	background-color: rgb(163,204,163);
+	color: white;
+	font-weight: bolder;
+}
+
+.takebtnpair .btn-agree:hover{
+	border-color: rgb(92,51,92);
+	background-color: white;
+	color: rgb(92,51,92);
+}
+
+.takebtnpair .btn-disagree{
+	border: 4px solid pink;
+	background-color: pink;
+	color: white;
+	font-weight: bolder;
+	border-radius: 0 15px 15px 0;
+}
+
+.takebtnpair .btn-disagree:hover{
+	border-color: rgb(92,51,92);
+	background-color: white;
+	color: rgb(92,51,92);
+}
+
+.sendmessageviewer .postbutton-send{
+	flex:1;
+	
+}
+.takemessageviewer .postbutton-take{
+	flex:1;
+	
+}
+
+.nosendmessage{
+	color: rgb(92,51,92);
+}
+.notakemessage{
+	color: rgb(92,51,92);
+}

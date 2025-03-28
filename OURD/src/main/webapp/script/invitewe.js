@@ -4,12 +4,15 @@ const userFind = document.getElementById("findUser");
 userFind.addEventListener("keyup", ()=>{
 	let findValue = userFind.value;
 	if(checkfindlength(findValue) === true){
-					weUserCheckDo = true;
-					userFind.style.border='3px solid green';
-				}else{
-					weUserCheckDo = false;
-					userFind.style.border='3px solid crimson';
-				}
+		weUserCheckDo = true;
+		userFind.style.border='4px solid rgb(92,51,92)';
+	}else{
+		weUserCheckDo = false;
+		userFind.style.border='4px solid crimson';
+	}
+	if(findValue.length == 0){
+		userFind.style.border='4px solid rgb(163,204,163)';
+	}
 })
 
 function checkfindlength(findValue){
@@ -17,6 +20,15 @@ function checkfindlength(findValue){
 }
 
 let clubNum = document.getElementById("slectClub");
+
+clubNum.addEventListener("change",()=>{
+	clubNum.style.border='4px solid rgb(92,51,92)';
+	if(clubNum.value == -1){
+		clubNum.style.border='4px solid rgb(163,204,163)';
+	}
+})
+
+
 async function searchUser(){
 	console.log(clubNum.value)
 	if(clubNum.value == -1){

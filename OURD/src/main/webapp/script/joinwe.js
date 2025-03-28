@@ -4,12 +4,15 @@ const weFind = document.getElementById("findClub");
 weFind.addEventListener("keyup", ()=>{
 	let findValue = weFind.value;
 	if(checkfindlength(findValue) === true){
-				weNameCheckDo = true;
-				weFind.style.border='3px solid green';
-			}else{
-				weNameCheckDo = false;
-				weFind.style.border='3px solid crimson';
-			}
+		weNameCheckDo = true;
+		weFind.style.border='4px solid rgb(92,51,92)';
+	}else{
+		weNameCheckDo = false;
+		weFind.style.border='4px solid crimson';
+	}
+	if(findValue.length == 0){
+		weFind.style.border='4px solid rgb(163,204,163)';
+	}
 })
 
 function checkfindlength(findValue){

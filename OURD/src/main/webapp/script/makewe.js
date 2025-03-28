@@ -5,36 +5,39 @@ isCheckWE = false;
 const we = document.getElementById("inputWe");
 we.addEventListener("keyup",()=>{
 	let weValue = we.value;
-	if(weValue.length < 1 ){
-		weCheckDo = false;
-		we.style.border='3px solid crimson';
-	}
+	
 	if(checkwelength(weValue) === true){
 			weCheckDo = true;
-			we.style.border='3px solid green';
+			we.style.border='4px solid rgb(92,51,92)';
 	}else{
 			weCheckDo = false;
-			we.style.border='3px solid crimson';
+			we.style.border='4px solid crimson';
+	}
+	if(weValue.length == 0 ){
+			weCheckDo = false;
+			we.style.border='4px solid rgb(163,204,163)';
 	}
 })
 
 function checkwelength(we){
-	return we.length != 0 && we.length<=20;
+	return we.length > 0 && we.length<=20;
 }
 
 async function checkWe(){
+	let inputWe = we.value;
+		
+	if(inputWe==''){
+		alert("입력된 이름이 없습니다")
+		return;
+	}
+	
 	if(!weCheckDo){
 		alert("유효한 이름이 아닙니다")
 		return;
 	}
 	
 	//console.log(id.value);
-	let inputWe = we.value;
 	
-	if(inputWe==''){
-		alert("입력된 이름이 없습니다")
-		return;
-	}
 	//console.log(inputId);
 	try{
 		const response = await fetch('validweajax.do',{
@@ -69,10 +72,12 @@ function handleWeValidationResult(data) {
             alert('이미 사용하고 있는 이름입니다');
             we.value = '';
             isCheckWe = false;
+			we.style.border='4px solid crimson';
             break;
 
         default:
             alert('예상치 못한 응답입니다');
+			we.style.border='4px solid crimson';
             isCheckWe = false;
     }
 }
