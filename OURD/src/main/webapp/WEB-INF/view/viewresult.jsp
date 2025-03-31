@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../parts/header.jsp"%>
 
-    <div class="viewmodal diaryview-modal">
+<link rel="stylesheet" type="text/css" href="${ctx }/css/vieweresultstyle.css?ver=1">
+
+<div class="inner"> 
+
+		<div class="viewmodal diaryview-modal">
     <div class="modal-diaryview">
       <div class="diaryviewer-header">
       	
@@ -12,13 +17,11 @@
 	        <div class="viewer-img">
 	        	<img name="viewerimg" id="viewerimg" 
 	        		src="/Uploads/${viewdiary.getImg()}"
-	        		style="width: 300px; height: 400px;"/>
+	        		style="width: 360px; height: 480px;"/>
 	        </div>
 	        <div class="viewer-contents">
-	        	<div class="viewer-header">
-	        		<div class="viewer-date">날짜 : ${viewdiary.getDate()}</div>
-	        		<div class="viewer-weather">날씨 : ${viewdiary.getWeather()}</div>
-	        	</div>
+	        	<div class="viewer-date">날짜 : ${viewdiary.getDate()}</div>
+	        	<div class="viewer-weather">날씨 : ${viewdiary.getWeather()}</div>
 	        	<div class="viewer-feel">기분 : ${viewdiary.getFeel()}</div>
 	        	<div class="viewer-writer">글쓴이 : ${viewdiary.getWriter()}</div>
 	        	<div class="viewer-title">제목 : ${viewdiary.getTitle()}</div>
@@ -26,8 +29,17 @@
 	        </div>
       	</c:if>
       	
-      	<button class="btn-close viewer-close" onclick="closediary()"> 닫기 </button>
       	
       </div>
+      	<button class="btn-result-close" onclick="closediary()"> 닫기 </button>
     </div>
   </div>
+	
+</div>
+
+<script>
+	function closediary(){
+		history.back();
+	}
+</script>
+<%@ include file="../parts/footer.jsp"%>

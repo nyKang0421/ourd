@@ -68,6 +68,9 @@ async function viewdiary(diarynum){
 		body: new URLSearchParams({diarynum}).toString(),
 	})
 	
-	
 	// 모달창 띄우기
+	location.href=ctx+"/viewerresult.do";
 }
+
+
+

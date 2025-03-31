@@ -80,15 +80,33 @@ function handleSearchUserResult(result){
 			alert('예상치 못한 응답입니다')
 	}
 	// 모달 활성화 하기
+	
 	activeWeModal();
 }
 
+function checkModalView(){
+	let modalstate = sessionStorage.getItem('modalon');
+	console.log(modalstate);
+	if(modalstate == 'on'){
+		document.querySelector('.modal').classList.add('active');
+		document.querySelector('.overlay').classList.add('active');
+	}
+}
+checkModalView()
+
 function activeWeModal(){
 	// 모달 활성화 하기
+	sessionStorage.setItem('modalon','on');
+	location.reload(true);
 }
 
 function NonActiveWeModal(){
+	document.querySelector(".joinweform").addEventListener("submit",function(event){
+			event.preventDefault();
+	})
 	// 모달 비활성화 하기
+	sessionStorage.removeItem('modalon');
+	history.go(0);
 }
 
 function sendinviteMsg(form){
@@ -130,6 +148,7 @@ function sendinviteMsg(form){
 			return;
 			//location.href=ctx+"/gojoinwe.do";
 			}
+			sessionStorage.removeItem('modalon');
 	    })
 	    .catch(error => console.error('Error:', error));
 	

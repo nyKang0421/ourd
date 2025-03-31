@@ -1,0 +1,249 @@
+.inner{
+}
+
+.diaryviewer{
+	height: 90%;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.diaryviewer h1{
+	flex: 1;
+	font-weight: bolder;
+	color: rgb(92,51,92);
+}
+.diaryviewer h2{
+	margin-top: 20px;
+	font-weight: bolder;
+	color: rgb(163,204,163);
+}
+
+.selectViewerClub{
+	flex: 1;
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.selectViewerClub label{
+	color: rgb(92,51,92);
+	font-weight: bolder;
+	font-size: 1.5em;
+	margin-right: 30px;
+}
+
+.selectViewerClub select{
+	outline: none;
+	height: 45px;
+	width: 300px;
+	color: rgb(92,51,92);
+	font-weight: bolder;
+	font-size: 1.1em;
+	text-align: center;
+	border: 4px solid rgb(163,204,163);
+	border-radius: 10px;
+	
+}
+
+.selectViewerClub select:hover{
+	border: 4px solid rgb(92,51,92);
+}
+
+.diarylist{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.diarylist .dlClubName{
+	color: rgb(92,51,92);
+	font-weight: bolder;
+	font-size: 1.5em;
+	flex: 1;
+}
+
+.diarylistsection{
+	flex: 6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.diaryviewerboard{
+	flex: 1;
+}
+
+.dlpre-btn{
+	flex: 1;
+}
+
+.dlpre-btn .prebtnno{
+	border: 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	width: 40px;
+	height: 60px;
+	border-radius: 10px;
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
+.dlpre-btn .prebtnok{
+	border: 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	width: 40px;
+	height: 60px;
+	border-radius: 10px;
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
+.dlpre-btn .prebtnok:hover{
+	background-color: white;
+	color: rgb(92,51,92);
+}
+
+.dllistinfo{
+	flex: 8;
+	display: flex;
+	height: 100%;
+	justify-content: space-around;
+}
+
+.diarywriter{
+	flex: 2;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.diarywriter .diarywriterinfo{
+	height: 70px;
+	line-height: 70px;
+	width:90%;
+	border: 4px solid rgb(163,204,163);
+	font-weight: bold;
+	color: rgb(163,204,163);
+	border-radius: 15px;
+}
+
+.diarytitle{
+	flex: 6;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.diarytitle .diarytitleinfo{
+	height: 70px;
+	width:90%;
+	line-height: 70px;
+	border: 4px solid rgb(92,51,92);
+	font-weight: bold;
+	color: rgb(92,51,92);
+	font-size: 1.3em;
+	border-radius: 15px;
+}
+
+.diarydeletebtn{
+	flex:1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.diarydeletebtn .ddbtn{
+	height: 70px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.ddbtn .deletediarybutton{
+	height: 70px;
+	background-color: pink;
+	width: 90%;
+	border: 4px solid pink;
+	border-radius: 15px;
+	color: white;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.ddbtn .deletediarybutton:hover{
+	cursor: pointer;
+	background-color: white;
+	color: pink;
+}
+
+
+.diaryshowbtn{
+	flex:1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.diaryshowbtn .dsbtn{
+	height: 70px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.dsbtn button{
+	height: 70px;
+	background-color: rgb(163,204,163);
+	width: 90%;
+	border: 4px solid rgb(163,204,163);
+	border-radius: 15px;
+	color: white;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+
+.dlpost-btn{
+	flex: 1;
+}
+
+.dsbtn button:hover{
+	cursor: pointer;
+	background-color: white;
+	color: rgb(163,204,163);
+}
+
+.dlpost-btn input{
+	border: 4px solid rgb(92,51,92);
+	background-color: rgb(92,51,92);
+	color: #fff;
+	width: 40px;
+	height: 60px;
+	border-radius: 10px;
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
+.dlpost-btn .postbtnok:hover{
+	color: rgb(92,51,92);
+	background-color: white;
+}
+
+
+.hiddenbutton{
+	border: none;
+}

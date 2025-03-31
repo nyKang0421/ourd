@@ -20,9 +20,7 @@
 	</footer>
     </div> 
 	
-	<%@ include file="./failModal.jsp" %>
-	<%@ include file="./successModal.jsp" %>
-	
+	<div class="overlay"></div>
 	
 </body>
 </html>

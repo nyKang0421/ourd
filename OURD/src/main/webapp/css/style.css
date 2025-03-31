@@ -8,6 +8,10 @@ a{
 	text-decoration: none;
 }
 
+select:hover{
+	cursor: pointer;
+}
+
 input{
 	cursor: pointer;
 	outline: none;
@@ -246,13 +250,116 @@ footer .location2{
 	object-fit: cover;
 }
 
+.overlay{
+	background-color: #00000096;
+ 	width: 100vw;
+ 	height: 100vh;
+ 	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index:-1;
+  	transition: 0.5s;
+  	visibility: hidden;
+  	opacity: 0;
+}
+
+.overlay.active{
+	z-index:1;
+  	transition: 0.2s;
+  	visibility: visible;
+  	opacity: 1;
+}
 
 
+.modal{
+	border: 6px solid rgb(163,204,163);
+	border-radius: 15px;
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+ 	z-index: -2;
+ 	visibility: hidden;
+	opacity: 0;
+}
 
+.modal.active{
+	z-index: 10;
+	visibility: visible;
+	opacity: 1;
+}
 
+.we-modal{
+	background-color: white;
+	height: 270px;
+	width: 540px;
+	color: rgb(92,51,92);
+}
 
+.we-modal .modal-content{
+	height: 100%;
+	width: 100%;
+}
 
+.we-modal .desc-header{
+	height: 100%;
+	width: 100%;
+}
 
+.joinweform{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.joinweform .wemodalmsgarea{
+	flex: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.joinweform .wemodalbtnarea{
+	flex: 1;
+}
+
+.we-modal .desc-header p{
+	color: rgb(92,51,92);
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+
+.we-modal button{
+	color: white;
+	font-size: 1.2em;
+	border-radius: 10px;
+	padding: 5px 20px;
+	font-weight: bolder;
+}
+
+.we-modal .btn-close{
+	background-color: pink;
+	border: 4px solid pink;
+}
+
+.we-modal .btn-close:hover{
+	color: pink;
+	background-color: white;
+	cursor: pointer;
+}
+
+.we-modal .btn-ok{
+	background-color: rgb(163,204,163);
+	border: 4px solid rgb(163,204,163);
+}
+
+.we-modal .btn-ok:hover{
+	color: rgb(163,204,163);
+	background-color: white;
+	cursor: pointer;
+}
 
 
 

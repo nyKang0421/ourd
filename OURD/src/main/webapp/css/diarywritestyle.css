@@ -1,0 +1,154 @@
+.inner{
+}
+
+.writenowe,
+.writeokwe{
+	color: rgb(92,51,92);
+}
+
+.diaryinput{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin-top: -10px;
+	color:rgb(92,51,92);
+}
+
+.diaryinput .diarywrite{
+	display: flex;
+	margin: 10px 0;
+	
+}
+
+
+.diarywrite .textarea-write{
+	flex:3;
+}
+
+.diarywriteForm{
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+
+.diarywriteForm .row{
+	flex: 1;
+}
+
+
+.textarea-write .row .field{
+	display: flex;
+	font-weight: bolder;
+	align-items: center;
+	justify-content: center;
+	height: 70%;
+}
+
+.textarea-write .field input,
+.textarea-write .field select,
+.textarea-write .field textarea{
+	flex: 1;
+	border: 3px solid rgb(163,204,163);
+	border-radius: 5px;
+	height: 100%;
+	color: rgb(92,51,92);
+	font-weight: bolder;
+}
+
+.textarea-write .field input::placeholder,
+.textarea-write .field textarea::placeholder{
+	color: rgb(163,204,163); 
+}
+
+.textarea-write .field input:hover,
+.textarea-write .field select:hover,
+.textarea-write .field textarea:hover{
+	border: 3px solid rgb(92,51,92);
+}
+
+.textarea-write .field textarea{
+	height: 100%;
+}
+
+.textarea-write .field select,
+.textarea-write .field textarea{
+	outline: none;
+}
+
+
+.textarea-write .field label{
+	width: 100px;
+}
+
+.rowcontent{
+	height: 220px;
+}
+
+.textarea-write .rowcontent .field{
+	display: flex;
+	font-weight: bolder;
+	align-items: center;
+	justify-content: center;
+	height: 90%;
+}
+
+
+.diarywrite .imgarea-write{
+	flex:2;
+}
+
+.imgarea-write label{
+	display: block;
+	font-size: 1.1em;
+	font-weight: bolder;
+}
+
+.imgarea-write .formfile{
+	border: 3px solid rgb(163,204,163);
+	color: rgb(163,204,163);
+	border-radius: 5px;
+	width: 90%;
+	margin-bottom: 5px;
+}
+
+.imgarea-write .formfile:hover{
+	border-color: rgb(92,51,92);
+}
+
+.imgarea-write .btn-imgupload{
+	border: 3px solid rgb(163,204,163);
+	background-color: rgb(163,204,163);
+	color: #fff;
+	padding: 5px 20px;
+	border-radius: 5px;
+	font-weight: bolder;
+}
+
+.imgarea-write .btn-imgupload:hover{
+	background-color:rgb(92,51,92);
+	border-color: rgb(92,51,92);
+}
+
+.diarysubmit{
+}
+
+.btn-submitdiary{
+	color: white;
+	background-color: rgb(92,51,92);
+	border: 4px solid rgb(92,51,92);
+	margin-top: 5px;
+	padding: 7px 80px;
+	border-radius: 10px;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+.btn-submitdiary:hover{
+	color: rgb(92,51,92);
+	background-color: white;
+	
+}
+
+.inputImg{
+	border: 2px dashed rgb(163,204,163);
+}

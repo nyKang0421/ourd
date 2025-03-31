@@ -35,6 +35,7 @@ import com.ourd.controller.view.MovepostDiaryList;
 import com.ourd.controller.view.MovepreDiaryList;
 import com.ourd.controller.view.RemoveDiary;
 import com.ourd.controller.view.ViewDiary;
+import com.ourd.controller.view.ViewerModalController;
 import com.ourd.controller.write.DiaryImgUploadAjax;
 import com.ourd.controller.write.DiaryWriteController;
 import com.ourd.controller.write.InsertDiary;
@@ -56,6 +57,7 @@ public class HandlerMapping {
 		mappings.put("/gomessage.do",new MessageController());
 		mappings.put("/godiarywrite.do",new DiaryWriteController());
 		mappings.put("/godiaryviewer.do",new DiaryViewerController());
+		mappings.put("/viewerresult.do",new ViewerModalController());
 		
 		
 		//belong 처리 mappings

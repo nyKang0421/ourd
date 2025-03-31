@@ -25,6 +25,7 @@ async function serchClub(){
 		return;
 	}
 	
+	
 	let findValue = weFind.value;
 	
 	try{
@@ -59,16 +60,34 @@ function handleSearchWeResult(result){
 			alert('예상치 못한 응답입니다')
 	}
 	// 모달 활성화 하기
+	
 	activeWeModal();
 }
+
+function checkModalView(){
+	let modalstate = sessionStorage.getItem('joinmodalon');
+	console.log(modalstate);
+	if(modalstate == 'on'){
+		document.querySelector('.modal').classList.add('active');
+		document.querySelector('.overlay').classList.add('active');
+	}
+}
+checkModalView()
 
 
 function activeWeModal(){
 	// 모달 활성화 하기
+	sessionStorage.setItem('joinmodalon','on');
+	location.reload(true);
 }
 
 function NonActiveWeModal(){
 	// 모달 비활성화 하기
+	document.querySelector(".joinweform").addEventListener("submit",function(event){
+			event.preventDefault();
+	})
+	sessionStorage.removeItem('joinmodalon');
+	history.go(0);
 }
 
 let ischecksubmit = false;
@@ -113,6 +132,7 @@ function sendJoinMsg(form){
 			return;
 			//location.href=ctx+"/gojoinwe.do";
 		  }
+		  sessionStorage.removeItem('joinmodalon');
 	    })
 	    .catch(error => console.error('Error:', error));
 	
